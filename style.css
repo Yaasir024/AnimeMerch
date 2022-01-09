@@ -1,0 +1,126 @@
+/* rgba(8, 8, 8)
+rgb(5, 4, 4) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to top, 
+    rgba(8, 8, 8,0.8),
+    rgb(5, 4, 4,0.8) ),
+    url(./images/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo span {
+    color: white;
+    font-size: 25px;
+}
+
+.herotext{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInleft;
+    animation-duration: 2s;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 15px;
+    animation-name: moveInright;
+    animation-duration: 2s;
+}
+
+@keyframes moveInleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    80% {
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInright {
+    0%{
+        opacity: 0;
+        transform: translateX(100px)
+    }
+
+    80% {
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
+}
