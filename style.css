@@ -1,17 +1,23 @@
 /* rgba(8, 8, 8)
 rgb(5, 4, 4) */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
+html {
+    font-size: 62.5%;
+}
 body {
     font-weight: 400px;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -26,18 +32,18 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
 
-.logo {
+.header__logo {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
-.logo span {
+.header__logo span {
     color: white;
     font-size: 25px;
 }
 
-.herotext{
+.header__herotext{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -49,23 +55,23 @@ body {
     color: white;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block;
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name: moveInleft;
     animation-duration: 2s;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 200;
-    letter-spacing: 15px;
+    letter-spacing: 1.5rem;
     animation-name: moveInright;
     animation-duration: 2s;
 }
@@ -73,11 +79,11 @@ body {
 @keyframes moveInleft {
     0%{
         opacity: 0;
-        transform: translateX(-100px)
+        transform: translateX(-10rem)
     }
 
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
     100%{
         opacity: 1;
@@ -88,11 +94,11 @@ body {
 @keyframes moveInright {
     0%{
         opacity: 0;
-        transform: translateX(100px)
+        transform: translateX(10rem)
     }
 
     80% {
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
     100%{
         opacity: 1;
@@ -104,9 +110,9 @@ body {
 .btn:visited {
     text-decoration: none;
     text-transform: uppercase;
-    padding: 15px 40px;
+    padding: 1.5rem 4.0rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
 }
 
@@ -120,7 +126,7 @@ body {
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
-.btn-white {
+.btn--white {
     background-color: white;
     color: #777;
 }
